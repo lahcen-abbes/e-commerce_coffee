@@ -1,0 +1,14 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+
+{% block branding %}
+<h1 id="head">  <!--taffichat lfog ga3 f la pagefdik lbanda zerga-->
+    <img src="{% static 'img/mycoffee.png' %}" alt="My Coffee" style="width:40px; height: 40px;"> <!--7etina logo ta3 site 7da title-->
+    My Coffee Administration
+    <h2> 
+{% endblock %}
+
+{% block extrastyle %} <!--bandiro te3dil 3la ga3 nidam al idara-->
+<link rel="stylesheet" href="{% static 'css/admin.css' %}" > <!--hada admin.css fichier créenah w rana dayrineh f static al asliya mycoffee/static/css-->
+
+{% endblock %}

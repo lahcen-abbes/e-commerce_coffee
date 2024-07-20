@@ -1,0 +1,28 @@
+#header{
+    background: #5A020Cce;
+    color: #fff;
+}
+
+#head{
+    color: bisque !important;
+}
+
+.module h2, .module caption, .inline-group h2,
+div.breadcrumbs{
+    background: #8a1320ce;
+}
+
+.selector-chosen h2{
+    background: #8a1320ce !important; 
+    color: #fff !important;
+}
+
+.button, input[type=submit], input[type=button], .button, input[type=submit], input[type=button], .button, input[type=submit], input[type=button]{
+    background: #8a1320ce !important;
+    color: #fff !important;
+}
+
+.button:active, input[type=submit]:active, input[type=button]:active, .button:focus, input[type=submit]:focus, input[type=button]:focus, .button:hover, input[type=submit]:hover, input[type=button]:hover{
+    background: #9c3440ce !important;
+}
+

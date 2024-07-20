@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> <!--ay fichier drnaleh static img css js ps déjà rana dayrinhom fl folder static bach ntigo newslolhom directe-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/pretty-checkbox.min.css' %}">
+    <title>My Coffee | {% block title %}  {% endblock %}</title>
+</head>
+<body>
+{% include 'partials/_navbar.html' %} <!--3ayetna lel lfile _navbar.html men templates/partials drnaha fl base bach mndeloch ncopoha f kol sef7a-->
+
+{% block content %} <!--content howa ism hna ndiroh 9adet ndiro fi blasteh ay ism-->
+        
+{% endblock %}
+
+{% include 'partials/_footer.html' %}
+
+<script src="{% static 'js/jquery-3.4.1.slim.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script>
+        $(function () { //hadi lfunction ta3 popper te3tik la date(l'année) te7t m3a copyright 
+            $('[data-toggle="popover"]').popover()
+        })
+        $(".year").text( (new Date).getFullYear() ); 
+
+        $(document).ready(function(){  //ki tdir refresh(actualisation lel la page)
+            $("#exampleModal").on('shown.bs.modal', function(){ //# représente id ta3 div li fl product.html fl div ta3 dak model li jbnah mn bootstrap, shown.bs.modal hadi jbnaha mn bootstrap, lfonction tekhdem ki hadi #exampleModal tedher
+                $(this).find("#inputQty").focus(); //this représente model(#exampleModal), find golnaleh 7awes 3la id ta3 input ta3 quantity ki tsibeh dir 3lih focus ye3ni dik cherta ta3 clavier teg3od 3nd input
+                $(this).find("#inputQty").select();  //daretlna selection 3la value li fl input
+            }); 
+
+        });
+</script>
+</body>
+</html>

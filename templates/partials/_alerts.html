@@ -1,0 +1,15 @@
+{% if messages %}
+    {% for msg in messages %}
+    <div class="alert alert-{{msg.tags}} alert-dismissible fade show" role="alert"> <!--affichatlna Testing Message 1 2-->
+        <strong>
+            {% if 'danger' == msg.tags %}
+                Error
+            {% else %}
+                {{msg.tags|title}}
+            {% endif %} 
+        : </strong> <!--affichalna fl lewla info w zawja success mlgr dekhelna kima lfog tbeyenlk bli django metnass9a m3a bootstrap ghi chaf strong fhemha, |title me3netha hada title aya tkheli l7erf lewel capital w lba9i small-->
+        {{msg}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    {% endfor %}
+    {% endif %}
